@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * A DTO for the Cat entity.
  */
-public class CatDTO implements Serializable {
+public class CatDTO extends AnimalDTO implements Serializable {
 
     private Long id;
 

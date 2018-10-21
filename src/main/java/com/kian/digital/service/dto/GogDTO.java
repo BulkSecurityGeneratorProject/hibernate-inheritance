@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * A DTO for the Gog entity.
  */
-public class GogDTO implements Serializable {
+public class GogDTO  extends AnimalDTO implements Serializable {
 
     private Long id;
 

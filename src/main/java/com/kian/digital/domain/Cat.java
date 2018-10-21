@@ -11,25 +11,17 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "cat")
-public class Cat implements Serializable {
+@DiscriminatorValue("cat")
+public class Cat  extends Animal implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
 
     @Column(name = "skin_coler")
     private String skinColer;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getSkinColer() {
         return skinColer;

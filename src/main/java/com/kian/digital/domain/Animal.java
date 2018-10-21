@@ -1,6 +1,11 @@
 package com.kian.digital.domain;
 
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.OptimisticLockType;
+import org.hibernate.annotations.OptimisticLocking;
+
 import javax.persistence.*;
 
 import java.io.Serializable;
@@ -10,6 +15,10 @@ import java.util.Objects;
  * A Animal.
  */
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="animalType",discriminatorType = DiscriminatorType.STRING)
+@DynamicInsert
+@DynamicUpdate
 @Table(name = "animal")
 public class Animal implements Serializable {
 

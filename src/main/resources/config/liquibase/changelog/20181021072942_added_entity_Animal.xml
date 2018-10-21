@@ -25,6 +25,15 @@
             <column name="name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="skin_coler" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="animal_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="voice" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
 
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>

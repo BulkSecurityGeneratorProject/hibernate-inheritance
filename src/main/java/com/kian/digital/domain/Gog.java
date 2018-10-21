@@ -1,6 +1,9 @@
 package com.kian.digital.domain;
 
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 
 import java.io.Serializable;
@@ -11,25 +14,18 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "gog")
-public class Gog implements Serializable {
+@DynamicInsert
+@DynamicUpdate
+@DiscriminatorValue("gog")
+public class Gog extends Animal implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    @Column(name = "voice")
+
+    @Column(name = "VOICE")
     private String voice;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getVoice() {
         return voice;

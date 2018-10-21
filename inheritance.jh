@@ -1,0 +1,27 @@
+entity  Animal{
+	name String,
+}
+
+entity  Gog{
+	voice String 
+    
+}
+
+
+entity  Cat{
+	skinColer String
+}
+
+
+
+
+
+
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix
+

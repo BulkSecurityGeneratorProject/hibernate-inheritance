@@ -1,0 +1,20 @@
+{
+    "name": "Cat",
+    "fields": [
+        {
+            "fieldName": "skinColer",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181021072944",
+    "entityTableName": "cat",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
